@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title>天天买-我们只是产品的搬用工</title>
+<title>我们只是产品的搬用工</title>
 <meta name="description" content="">
 <meta name="keywords" content="">
 <link rel="stylesheet" type="text/css" href="css/font-awesome-4.2.0/css/font-awesome.min.css">
@@ -13,12 +13,20 @@
 </head>
 <body>
     <div id="b">
-    	<div id="m">
-    		<div id="t"><span id="t-bars">天天买&nbsp;<i class="fa fa-bars fa-fw"></i></span></div>
-    		<div id="c" style="font-size:100px"><input type="text"></div>
-    		<div id="d" style="font-size:100px">123s</div>
+    	<div id="t">
+			<div id="t-bars">
+				<ul>
+					<li class="t-bars-li tlogo"><a class="t-bars-a" href="#">天天买</a></li>
+					<li class="t-bars-li"><a class="t-bars-a" href="#">今日今日</a></li>
+					<li class="t-bars-li"><a class="t-bars-a" href="#">今日今日</a></li>
+				</ul>
+			</div>
     	</div>
-    	<div id="bg"><img id="bg-img" src="img/2.jpg"></div>
+    	<div id="c">
+			<div class="c-lists"></div>
+    	</div>
+    	<div id="d">123s</div>
+    	</div>
     </div>
 </body>
 </html>
