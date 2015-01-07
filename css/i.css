@@ -9,10 +9,10 @@
 	margin: 0px;
 	padding: 0px;
 	border: none;
+	outline: none;
 }
 body{
 	font-family: "PingHei","Helvetica","Arial","Verdana","sans-serif","Microsoft YaHei","微软雅黑";
-	overflow: hidden;
 	font-size: 14px;
 	width: 100%;
 }
@@ -50,7 +50,80 @@ body{
 .t-bars-a:hover{
 	color: #DBDCD6;
 }
+.tsou{
+	display: inline-block;
+	float: right;
+	line-height: 46px;
+	position: relative;
+}
+.tsou input{
+	padding: 5px 30px 5px 10px;
+	border-radius: 5px;
+	width: 200px;
+	font-size: 18px;
+	box-shadow: none;
+	outline: none;
+	vertical-align: middle;
+}
+#t-submit{
+	margin-left: -28px;
+	background-color: transparent;
+	line-height: 31px;
+	padding: 0px 8px;
+	color: #666;
+	box-shadow:none;
+	outline: none;
+	z-index: 1000px;
+	cursor: pointer;
+	vertical-align: middle;
+	/*position: absolute;*/
+}
 #c{
 	width: 980px;
 	margin: 30px auto 30px auto;
+	position: relative;
+}
+#c ul li{
+	list-style: none;
+	text-align: left;
+}
+.c-li{
+	border: solid 1px #ccc;
+	width: 980px;
+	height: 255px;
+	margin-bottom: 20px;
+	overflow: hidden;
+	border-radius: 3px;
+}
+.c-li img{
+	max-width: 420px;
+	max-height: 255px;
+	vertical-align: middle;
+}
+.c-li-img{
+	width: 420px;
+	height: 255px;
+	overflow: hidden;
+	text-align: center;
+	display: inline-block;
+	line-height: 255px;
+}
+.c-li-info{
+	width: 560px;
+	height: 255px;
+	overflow: hidden;
+	display: inline-block;
+}
+#top{
+	padding: 10px;
+	position: fixed;
+	z-index: 1000px;
+	bottom: 100px;
+	right: 50px;
+	border: solid 1px #666;
+	cursor: pointer;
+}
+#d{
+	margin-bottom: 30px;
+	font-size: 12px;
 }
