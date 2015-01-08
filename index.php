@@ -19,7 +19,7 @@
 					<li class="t-bars-li tlogo"><a class="t-bars-a" href="#">爱国者</a></li>
 					<li class="t-bars-li"><a class="t-bars-a" href="#">爱国者</a></li>
 					<li class="t-bars-li"><a class="t-bars-a" href="#">爱国者</a></li>
-					<li class="tsou"><form><input type="text"><button id="t-submit" style="submit"><i class="fa fa-search"></i></button></form></li>
+					<li class="tsou"><form><input placeholder="搜索" type="text"><button id="t-submit" style="submit"><i class="fa fa-search"></i></button></form></li>
 				</ul>
 			</div>
     	</div>
