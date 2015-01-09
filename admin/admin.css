@@ -1,0 +1,23 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2015-01-09 11:02:30
+ * @version $Id$
+ */
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.m-i{
+	padding: 10px;
+}
+.input-text{
+	width: 600px;
+	line-height: 18px;
+	padding: 5px 10px;
+}
+.price{
+	width: 200px;
+}
