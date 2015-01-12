@@ -79,7 +79,7 @@
 			$keyString = implode(",",$key);
 			$dataString = implode("','",$data);
 			$sql = "insert into $this->sql_b ($keyString) values ('$dataString')";
-			// var_dump($this->mysql);
+			//var_dump($sql);
 			$result=mysqli_query($this->mysql,$sql);
 			if($result && mysqli_affected_rows($this->mysql)>0){
 				return mysqli_fetch_row(mysqli_query($this->mysql,"SELECT LAST_INSERT_ID()"));

@@ -6,6 +6,7 @@
  */
 $(function(){
 	tj();
+	upimg.init();
 })
 var b_ajax;
 function i_ajax(t,u,dt,d,bf,su){
@@ -43,9 +44,40 @@ function tj_bf(){
 	$(".m-i button").html('提交中...').attr('disabled', 'disabled');
 }
 function tj_su(data){
-	if (data.d) {
+	if (data[0]) {
 		$("#sort").val('');
+		$("#info").html(data[1]);
 	} else{
 		alert('提交失败，请稍后再试！');
-	};
+		$("#info").html(data[1]);
+	}
+	$(".m-i button").html('提交').removeAttr('disabled');
+}
+var upimg={
+	imgtype:['image/jpg','image/jpeg','image/gif','image/png'],
+	up:function(e){
+		e = e || window.event;
+		var f=e.target.files[0];
+		// if (this.check(f.type)) {};
+		if (f.type.indexOf('image')==0) {
+			
+		}else{
+			alert('你选择的不是图片！')
+		}
+	},
+	check:function(a){
+		for (var i = 0,v; v=this.imgtype['i']; i++) {
+			if (v==a) {
+				return true;
+			}
+		};
+		return false;
+	},
+	init:function(){
+		var t=this;
+		$("#img").change(function(e) {
+			t.up(e);
+			return false;
+		});
+	}
 }
