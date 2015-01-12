@@ -28,7 +28,7 @@ function tj(){
 			"title":$.trim($("#title").val()),
 			"price":$.trim($("#price").val()),
 			"store":$.trim($("#store").val()),
-			"img":$.trim($("#img").val()),
+			"img":$.trim($("#img-show img").attr('p')),
 			"links":$.trim($("#links").val()),
 			"sort":$.trim($("#sort").val()),
 			"content":$.trim($("#content").val()),
@@ -59,8 +59,28 @@ var upimg={
 		e = e || window.event;
 		var f=e.target.files[0];
 		// if (this.check(f.type)) {};
+		// console.log(f);
 		if (f.type.indexOf('image')==0) {
-			
+			$.ajax({
+				type:"POST",
+				async:false,
+				global:false,
+				url:"upfile.php?n="+f.name,
+				dataType:"json",
+				data:f,
+				contentType:"multipart/form-data",
+				processData:false,
+				beforeSend:function(){
+					$("#img-show").html('<i class="fa fa-refresh fa-spin"></i>');
+				},
+				success:function(d){
+					if (d.p) {
+						$("#img-show").html('<img p="'+d.p+'" width="100" height="100" src="..'+d.p+'">');
+					}else{
+						alert('图片上传失败，请稍后再试！');
+					}
+				}
+			});
 		}else{
 			alert('你选择的不是图片！')
 		}

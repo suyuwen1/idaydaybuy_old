@@ -6,6 +6,7 @@
 <title>添加产品</title>
 <meta name="description" content="">
 <meta name="keywords" content="">
+<link rel="stylesheet" type="text/css" href="../css/font-awesome-4.2.0/css/font-awesome.min.css">
 <link href="admin.css" rel="stylesheet">
 <script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
 <script type="text/javascript" src="admin.js"></script>
@@ -27,6 +28,3 @@
     </div>
 </body>
 </html>
-<?php
-var_dump(ini_get_all());
-?>
