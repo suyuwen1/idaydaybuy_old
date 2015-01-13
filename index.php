@@ -42,7 +42,7 @@ $M=new Allfunction();
 					}
 					
 				?>
-				<li class="c-li"><div class="c-li-img"><img src="img/123.png"></div><div class="c-li-info"><div class="title">没有找到数据没有找到数据没到数据</div><div class="content">没有找到数据没有找到数据没有找到数据没有找到数据没有找到数据没有找到数据没有找到数据没有找到数据</div><div class="qita"><span class="rmb">&yen; </span><span class="price">34.53</span><span class="store">爱国者</span><a target="_blank" href=""><button type="button" class="links">去购买</button></a></div></div></li>
+				<li class="c-li"><div class="c-li-img"><img src="img/123.png"></div><div class="c-li-info"><div class="title">没有找没有找到数找到数据没到数找到数据有找到数据没到数据</div><div class="content">没有找到数据没有找到数据没有找到数据数据没有找到数据没有找到数据没有找到数有找到数据没没有找到数有找数据没有找到数据数据数据没有找到数据没有找到数据没有找到数有找到数没有找到数据没有找到数有找到数据没到数据没有找到数据没有找到数据没有找到数有找到数据没有找到数据没有找到数据没有找到数有找到数据没数据没有找到数据没有找到数据没有找到数据没有找据没有找据没有找到数据没有找到数据没有找到数据没有找到数据</div><div class="qita"><div class="price_l"><div class="rmb">&yen;</div><div class="price">34.53</div><div class="store">爱国者s有找到数有找到数据没到数据没有找到数据没有找到数</div></div><div class="links"><a target="_blank" href="">去购买</a></div></div></div></li>
 				<li class="c-li"><div class="c-li-img"><img src="img/456.jpg"></div><div class="c-li-info">1</div></li>
 				<li class="c-li"><div class="c-li-img"><img src="img/123.png"></div><div class="c-li-info">1</div></li>
 			</ul>
