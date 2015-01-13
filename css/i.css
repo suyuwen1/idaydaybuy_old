@@ -12,7 +12,7 @@
 	outline: none;
 }
 body{
-	font-family: "PingHei","Helvetica","Arial","Verdana","Microsoft YaHei","微软雅黑","sans-serif";
+	font-family: "Microsoft YaHei","微软雅黑","sans-serif";
 	font-size: 14px;
 	width: 100%;
 }
@@ -118,6 +118,10 @@ body{
 	height: 255px;
 	overflow: hidden;
 	display: inline-block;
+	padding: 10px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 #top{
 	padding: 10px;
@@ -132,4 +136,40 @@ body{
 #d{
 	margin-bottom: 30px;
 	font-size: 12px;
+}
+.title{
+	font-size: 32px;
+	text-align: center;
+	padding: 10px 0px;
+}
+.content{
+	color: #666;
+	padding: 10px 0px;
+}
+.qita{
+	padding: 10px 0px 0px 0px;
+}
+.price{
+	font-weight: 100;
+	font-size: 46px;
+	color: #EE6411;
+}
+.rmb{
+	font-size: 32px;
+	color: #EE6411;
+	font-weight: 100;
+}
+.store{
+	font-size: 14px;
+	color: #ccc;
+	padding: 0px 5px;
+}
+.links{
+	/*position: absolute;*/
+	padding: 15px 30px;
+	background-color: #ccc;
+	/*bottom: 10px;*/
+	/*right: 0px;*/
+	/*display: inline-block;*/
+	vertical-align: bottom;
 }

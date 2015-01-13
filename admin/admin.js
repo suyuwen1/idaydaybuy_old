@@ -7,6 +7,7 @@
 $(function(){
 	tj();
 	upimg.init();
+	title_del.del();
 })
 var b_ajax;
 function i_ajax(t,u,dt,d,bf,su){
@@ -34,7 +35,7 @@ function tj(){
 			"content":$.trim($("#content").val()),
 		}
 		if(da.title!='' && da.price!='' && da.store!='' && da.img!='' && da.links!='' && da.sort!='' && da.content!=''){
-			i_ajax('post','post.php','json',{"name":"add","d":da},tj_bf,tj_su);
+			i_ajax('post','post.php','json',{"name":$.trim($('#m').attr('d')),"d":da,"i":$.trim($('#m').attr('i'))},tj_bf,tj_su);
 		}else{
 			alert('请全部填写！');
 		}
@@ -53,6 +54,24 @@ function tj_su(data){
 	}
 	$(".m-i button").html('提交').removeAttr('disabled');
 }
+var title_del={
+	i:0,
+	del:function (){
+		var t=this;
+		$(".del").click(function(event) {
+			t.i=$(this).parent('div').attr('id');
+			i_ajax('post','post.php','json',{"name":'del',"d":t.i},'',t.del_su);
+		});
+	},
+	del_su:function (data){
+		if (data[0]) {
+			$("#"+title_del.i).remove();
+		} else{
+			alert('删除失败，稍后再试！');
+		};
+	}
+}
+
 var upimg={
 	imgtype:['image/jpg','image/jpeg','image/gif','image/png'],
 	up:function(e){
@@ -75,7 +94,7 @@ var upimg={
 				},
 				success:function(d){
 					if (d.p) {
-						$("#img-show").html('<img p="'+d.p+'" width="100" height="100" src="..'+d.p+'">');
+						$("#img-show").html('<img p="'+d.p+'" width="100" height="100" src="../'+d.p+'">');
 					}else{
 						alert('图片上传失败，请稍后再试！');
 					}

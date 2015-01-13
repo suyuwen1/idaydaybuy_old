@@ -1,3 +1,9 @@
+<?php
+function __autoload($className){
+    include 'class/'.$className.'_class.php';
+}
+$M=new Allfunction();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,7 +31,18 @@
     	</div>
     	<div id="c">
 			<ul>
-				<li class="c-li"><div class="c-li-img"><img src="img/123.png"></div><div class="c-li-info">1</div></li>
+				<?php
+					$s=$M->biao('products')->where('id>0')->select();
+					if ($s) {
+						foreach ($s as $k => $v) {
+							echo '<li class="c-li"><div class="c-li-img"><img src="'.$v['img'].'"></div><div class="c-li-info">1</div></li>';
+						}
+					} else {
+						echo '没有找到数据！';
+					}
+					
+				?>
+				<li class="c-li"><div class="c-li-img"><img src="img/123.png"></div><div class="c-li-info"><div class="title">没有找到数据没有找到数据没到数据</div><div class="content">没有找到数据没有找到数据没有找到数据没有找到数据没有找到数据没有找到数据没有找到数据没有找到数据</div><div class="qita"><span class="rmb">&yen; </span><span class="price">34.53</span><span class="store">爱国者</span><a target="_blank" href=""><button type="button" class="links">去购买</button></a></div></div></li>
 				<li class="c-li"><div class="c-li-img"><img src="img/456.jpg"></div><div class="c-li-info">1</div></li>
 				<li class="c-li"><div class="c-li-img"><img src="img/123.png"></div><div class="c-li-info">1</div></li>
 			</ul>

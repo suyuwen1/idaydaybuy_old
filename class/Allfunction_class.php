@@ -227,5 +227,8 @@
 			//返回结果
 			return $newpicname;
 		}
+		function __destruct(){
+			$this->d_all();
 		}
+	}
 ?>
