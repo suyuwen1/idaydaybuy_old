@@ -45,7 +45,7 @@ if (!empty($_GET['name'])) {
     		<div class="m-i">链接：<input id="links" class="input-text" size="200" type="text" value="<?php echo ($name=='add')?'':$s[0]['links'];?>"></div>
     		<div class="m-i">排序：<input id="sort" class="input-text price" size="50" type="text" value="<?php echo ($name=='add')?'':$s[0]['sort'];?>"></div>
     		<div class="m-i">内容：<textarea id="content" rows="6" cols="100"><?php echo ($name=='add')?'':$s[0]['content'];?></textarea></div>
-    		<div class="m-i"><button type="button">提交</button></div>
+    		<div class="m-i"><button type="button">提交</button><a style="padding:20px;" href="admin.php">返回</a></div>
             <div id="info"></div>
     	</div>
     </div>
