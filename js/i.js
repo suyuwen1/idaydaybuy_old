@@ -7,7 +7,22 @@
 $(function(){
 	top_show();
 	top_click();
-})
+	// sou_click();
+});
+var b_ajax;
+function i_ajax(t,u,dt,d,bf,su){
+	if(b_ajax){
+		b_ajax.abort();
+	}
+	b_ajax=$.ajax({
+		type:t,
+		url:u,
+		dataType:dt,
+		data:d,
+		beforeSend:bf,
+		success:su
+	});
+}
 function top_show(){
 	$(window).scroll(function(event) {
 		var t=$(this).scrollTop();
