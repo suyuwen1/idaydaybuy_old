@@ -48,6 +48,7 @@ function tj_su(data){
 	if (data[0]) {
 		$("#sort").val('');
 		$("#info").html(data[1]);
+		alert(data[1]);
 	} else{
 		alert('提交失败，请稍后再试！');
 		$("#info").html(data[1]);

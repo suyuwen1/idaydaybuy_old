@@ -17,7 +17,17 @@
 	width: 600px;
 	line-height: 18px;
 	padding: 5px 10px;
+	border: solid 1px #999;
 }
 .price{
 	width: 200px;
+}
+#content{
+	border: solid 1px #999;
+}
+#m div{
+	padding: 10px;
+}
+#m input{
+	border: solid 1px #999;
 }
