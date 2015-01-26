@@ -96,8 +96,10 @@
 					$a[]=$row;
 				}
 				return $a;
+				// return mysqli_error($this->mysql);
 				}else{
 					return false;
+					// return mysqli_error($this->mysql);
 					}
 			}
 		public function sel_str($sql){//直接输入字符串查询

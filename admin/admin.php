@@ -1,4 +1,5 @@
 <?php
+session_start();
 if (empty($_SESSION['user'])) {
     header("Location:index.php");
     exit;
@@ -16,15 +17,15 @@ $M=new Allfunction();
 <title>后台管理</title>
 <meta name="description" content="">
 <meta name="keywords" content="">
-<link rel="stylesheet" type="text/css" href="css/font-awesome-4.2.0/css/font-awesome.min.css">
-<link href="" type="text/css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../css/font-awesome-4.2.0/css/font-awesome.min.css">
+<link href="admin.css" type="text/css" rel="stylesheet">
 <script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
 <script type="text/javascript" src="admin.js"></script>
 </head>
 <body>
     <div id="b">
     	<div id="m">
-    		<div style="padding:10px;"><a target="_blank" href="addproduct.php">添加</a></div>
+    		<div id="bars" style="padding:10px;"><a target="_blank" href="addproduct.php">添加产品</a><a target="_blank" href="adduser.php">添加用户</a></div>
     		<?php
     			$s=$M->biao('products')->where('id>"0"')->order('sort')->select();
     			if ($s) {

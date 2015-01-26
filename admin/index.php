@@ -1,35 +1,42 @@
 <?php
+// ob_start();
+$i='';
+session_start();
 function __autoload($className){
 	include '../class/'.$className.'_class.php';
 }
 $M=new Allfunction();
 if (!empty($_POST['user']) && !empty($_POST['pw'])) {
-	if (!empty($_SESSION['ctime']) && ((time()-strtotime("-30 minutes"))>$_SESSION['ctime'])) {
-		echo "密码输入3次，请稍后再试！";
+	if (!empty($_SESSION['ctime']) && ((time()-strtotime("-30 minutes"))<$_SESSION['ctime'])) {
+		$i="密码输入3次，请稍后再试！";
 	}else{
 		$s=$M->biao('login')->where('user="'.$_POST['user'].'"')->select();
 		if ($s) {
 			if ($s[0]['pw']==md5($_POST['pw'].'ibuy')) {
-				session_start();
 				$_SESSION['user']=$_POST['user'];
 				unset($_SESSION['ctime']);
 				unset($_SESSION['dl']);
-				header("Location:admin.php");
+				$i=1;
 			}else{
 				$_SESSION['dl']=empty($_SESSION['dl'])? 2 : $_SESSION['dl']-1;
 				if ($_SESSION['dl']<=0) {
 					$_SESSION['ctime']=time();
-					echo '密码输入3次，请稍后再试！';
+					$i='密码输入3次，请稍后再试！';
 				}else{
-					echo '密码错误！';
+					$i='密码错误！';
 				}
 			}
 		}else{
-			echo '无此用户！';
+			$i='无此用户！';
 		}
 	}
 }else{
-	echo '请输入用户和密码！';
+	$i='请输入用户和密码！';
+}
+if ($i==1) {
+	header('Location:admin.php');
+	// ob_end_flush();
+	// exit;
 }
 ?>
 <!DOCTYPE html>
@@ -45,7 +52,12 @@ if (!empty($_POST['user']) && !empty($_POST['pw'])) {
 <body>
 	<div id="b">
 		<div id="m">
-		<form method="post">
+		<?php 
+			if ($i!=1) {
+				echo $i;
+			}
+		?>
+			<form method="post">
 				<div><input type="text" name="user" value="<?php echo empty($_POST['user'])? '' : $_POST['user'];?>"></div>
 				<div><input type="password" name="pw"></div>
 				<div><button id="tj" type="submit">登陆</button></div>
