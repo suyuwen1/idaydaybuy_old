@@ -100,6 +100,14 @@
 					return false;
 					}
 			}
+		public function sel_str($sql){//直接输入字符串查询
+			$result=mysqli_query($this->mysql,$sql);
+			if ($result) {
+				return mysqli_fetch_array($result);
+			}else{
+				return false;
+			}
+		}
 		public function update($data){//更新数据 $data 组数
 			$data2='';
 			$js=0;

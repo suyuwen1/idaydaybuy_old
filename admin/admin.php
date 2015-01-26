@@ -22,10 +22,10 @@ $M=new Allfunction();
     	<div id="m">
     		<div style="padding:10px;"><a target="_blank" href="addproduct.php">添加</a></div>
     		<?php
-    			$s=$M->biao('products')->where('id>"0"')->order()->select();
+    			$s=$M->biao('products')->where('id>"0"')->order('sort')->select();
     			if ($s) {
     				foreach ($s as $key => $value) {
-    					echo '<div id="'.$value['id'].'" style="padding:5px;">'.$value['title'].' <a target="_blank" href="addproduct.php?name=change&id='.$value['id'].'">修改</a> <a class="del" href="#">删除</a></div>';
+    					echo '<div id="'.$value['id'].'" style="padding:5px;"><span style="color:blue">'.$value['sort'].'</span> '.$value['title'].' <a target="_blank" href="addproduct.php?name=change&id='.$value['id'].'">修改</a> <a class="del" href="#">删除</a></div>';
     				}
     			}else{
     				echo '没有数据！';

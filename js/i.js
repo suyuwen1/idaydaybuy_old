@@ -7,7 +7,7 @@
 $(function(){
 	top_show();
 	top_click();
-	screen_width();
+	// screen_width();
 	// sou_click();
 });
 var b_ajax;

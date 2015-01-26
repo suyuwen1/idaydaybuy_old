@@ -5,229 +5,247 @@
  * @date    2015-01-01 17:18:52
  * @version $Id$
  */
-*{
-	margin: 0px;
-	padding: 0px;
-	border: none;
-	outline: none;
-}
-body{
-	font-family: "Microsoft YaHei","微软雅黑","sans-serif";
-	font-size: 14px;
-	width: 100%;
-	color: #404040;
-}
-@media screen and (min-width: 980px){
-#b{
-	text-align: center;
-}
-#t{
-	height: 46px;
-	background-color: #444;
-	background-color:rgba(0,0,0,0.6);
-	margin-bottom: 30px;
-}
-#t-bars{
-	width: 980px;
-	margin: 0px auto 0px auto;
-	text-align: left;
-}
-.t-bars-li{
-	list-style: none;
-	display: inline-block;
-	padding: 0px 20px 0px 20px;
-	text-align: center;
-	float: left;
-}
-.tlogo{
-	text-align: left;
-	font-size: 18px;
-	padding-left: 0px;
-}
-.t-bars-a{
-	text-decoration: none;
-	color: #fff;
-	line-height: 46px;
-	padding: 0px 10px;
-	display: inline-block;
-}
-.t-bars-a:hover{
-	color: #DBDCD6;
-}
-.tsou{
-	display: inline-block;
-	float: right;
-	line-height: 46px;
-	position: relative;
-}
-.tsou input{
-	padding: 6px 30px 6px 10px;
-	border-radius: 5px;
-	width: 200px;
-	font-size: 16px;
-	font-weight: 100;
-	box-shadow: none;
-	outline: none;
-	vertical-align: middle;
-	font-family: "Microsoft YaHei";
-}
-#t-submit{
-	margin-left: -28px;
-	background-color: transparent;
-	line-height: 31px;
-	/*padding: 0px 8px;*/
-	width: 28px;
-	color: #ccc;
-	box-shadow:none;
-	outline: none;
-	z-index: 1000;
-	cursor: pointer;
-	vertical-align: middle;
-	/*position: absolute;*/
-}
-#t-submit:hover{
-	color: #666;
-}
-#c{
-	width: 980px;
-	margin: 30px auto 30px auto;
-	position: relative;
-}
-#c ul li{
-	list-style: none;
-	text-align: left;
-}
-.c-li{
-	border: solid 1px #ccc;
-	width: 980px;
-	height: 255px;
-	margin-bottom: 20px;
-	overflow: hidden;
-	border-radius: 3px;
-}
-.c-li img{
-	max-width: 420px;
-	max-height: 255px;
-	vertical-align: middle;
-}
-.c-li-img{
-	width: 420px;
-	height: 255px;
-	overflow: hidden;
-	text-align: center;
-	display: inline-block;
-	line-height: 255px;
-}
-.c-li-info{
-	width: 560px;
-	height: 255px;
-	overflow: hidden;
-	display: inline-block;
-	padding: 10px;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
-#top{
-	padding: 10px;
-	position: fixed;
-	z-index: 1000px;
-	bottom: 100px;
-	right: 50px;
-	border: solid 1px #666;
-	cursor: pointer;
-	display: none;
-}
-#d{
-	margin-bottom: 30px;
-	font-size: 12px;
-}
-.title{
-	font-size: 24px;
-	font-weight: 100;
-	/*height: 46px;*/
-	/*font-weight: 100;*/
-	text-align: center;
-	padding: 10px 0px;
-	overflow: hidden;
-	text-overflow:ellipsis;
-	white-space: nowrap;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
-.content{
-	color: #999;
-	height: 130px;
-	padding: 10px 0px;
-	overflow: hidden;
-	line-height: 22px;
-	font-weight: 100;
-	text-overflow:ellipsis;
-	/*white-space: nowrap;*/
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
-.qita{
-	font-weight: 100;
-	padding: 10px 0px 0px 0px;
-	height: 38px;
-}
-.price{
-	font-weight: 100;
-	font-size: 38px;
-	color: #EE6411;
-	display: inline-block;
-	float: left;
-	padding: 0px 5px;
-	line-height: 38px;
-}
-.rmb{
-	font-size: 24px;
-	color: #EE6411;
-	font-weight: 100;
-	display: inline-block;
-	float: left;
-	line-height: 38px;
-}
-.store{
-	font-size: 14px;
-	color: #ccc;
-	padding: 0px 5px;
-	width: 280px;
-	display: inline-block;
-	text-overflow:ellipsis;
-	overflow: hidden;
-	white-space: nowrap;
-	vertical-align: 10px;
-	float: left;
-	position: absolute;
-	bottom: 0px;
-}
-.price_l{
-	display: inline-block;
-	height: 38px;
-	position: relative;
-}
-.links{
-	display: inline-block;
-	text-align: center;
-	float: right;
-	height: 38px;
-	line-height: 38px;
-	font-weight: 100;
-	font-size: 16px;
-}
-.links a {
-	text-decoration: none;
-	background-color: #EE6411;
-	color: #fff;
-	width: 100px;
-	height: 38px;
-	display: block;
-}
-.links a:hover{
-	background-color: #E65B1A;
-}
-}
+ *{
+ 	margin: 0px;
+ 	padding: 0px;
+ 	border: none;
+ 	outline: none;
+ }
+ body{
+ 	font-family: "Microsoft YaHei","微软雅黑","sans-serif";
+ 	font-size: 14px;
+ 	width: 100%;
+ 	color: #404040;
+ }
+ @media screen and (min-width: 980px){
+ 	#b{
+ 		text-align: center;
+ 	}
+ 	#t{
+ 		height: 46px;
+ 		background-color: #444;
+ 		background-color:rgba(0,0,0,0.6);
+ 		margin-bottom: 30px;
+ 	}
+ 	#t-bars{
+ 		width: 980px;
+ 		margin: 0px auto 0px auto;
+ 		text-align: left;
+ 	}
+ 	.t-bars-li{
+ 		list-style: none;
+ 		display: inline-block;
+ 		padding: 0px 20px 0px 20px;
+ 		text-align: center;
+ 		float: left;
+ 	}
+ 	.tlogo{
+ 		text-align: left;
+ 		font-size: 18px;
+ 		padding-left: 0px;
+ 	}
+ 	.t-bars-a{
+ 		text-decoration: none;
+ 		color: #fff;
+ 		line-height: 46px;
+ 		padding: 0px 10px;
+ 		display: inline-block;
+ 	}
+ 	.t-bars-a:hover{
+ 		color: #DBDCD6;
+ 	}
+ 	.tsou{
+ 		display: inline-block;
+ 		float: right;
+ 		line-height: 46px;
+ 		position: relative;
+ 	}
+ 	.tsou input{
+ 		padding: 6px 30px 6px 10px;
+ 		border-radius: 5px;
+ 		width: 200px;
+ 		font-size: 16px;
+ 		font-weight: 100;
+ 		box-shadow: none;
+ 		outline: none;
+ 		vertical-align: middle;
+ 		font-family: "Microsoft YaHei";
+ 	}
+ 	#t-submit{
+ 		margin-left: -28px;
+ 		background-color: transparent;
+ 		line-height: 31px;
+ 		/*padding: 0px 8px;*/
+ 		width: 28px;
+ 		color: #ccc;
+ 		box-shadow:none;
+ 		outline: none;
+ 		z-index: 1000;
+ 		cursor: pointer;
+ 		vertical-align: middle;
+ 		/*position: absolute;*/
+ 	}
+ 	#t-submit:hover{
+ 		color: #666;
+ 	}
+ 	#c{
+ 		width: 980px;
+ 		margin: 30px auto 30px auto;
+ 		position: relative;
+ 	}
+ 	#c ul li{
+ 		list-style: none;
+ 		text-align: left;
+ 	}
+ 	.c-li{
+ 		border: solid 1px #ccc;
+ 		width: 980px;
+ 		height: 255px;
+ 		margin-bottom: 20px;
+ 		overflow: hidden;
+ 		border-radius: 3px;
+ 	}
+ 	.c-li img{
+ 		max-width: 420px;
+ 		max-height: 255px;
+ 		vertical-align: middle;
+ 	}
+ 	.c-li-img{
+ 		width: 420px;
+ 		height: 255px;
+ 		overflow: hidden;
+ 		text-align: center;
+ 		display: inline-block;
+ 		line-height: 255px;
+ 	}
+ 	.c-li-info{
+ 		width: 560px;
+ 		height: 255px;
+ 		overflow: hidden;
+ 		display: inline-block;
+ 		padding: 10px;
+ 		-webkit-box-sizing: border-box;
+ 		-moz-box-sizing: border-box;
+ 		box-sizing: border-box;
+ 	}
+ 	#top{
+ 		padding: 10px;
+ 		position: fixed;
+ 		z-index: 1000px;
+ 		bottom: 100px;
+ 		right: 50px;
+ 		border: solid 1px #666;
+ 		cursor: pointer;
+ 		display: none;
+ 	}
+ 	#d{
+ 		margin-bottom: 30px;
+ 		font-size: 12px;
+ 	}
+ 	.title{
+ 		font-size: 24px;
+ 		font-weight: 100;
+ 		/*height: 46px;*/
+ 		/*font-weight: 100;*/
+ 		text-align: center;
+ 		padding: 10px 0px;
+ 		overflow: hidden;
+ 		text-overflow:ellipsis;
+ 		white-space: nowrap;
+ 		-webkit-box-sizing: border-box;
+ 		-moz-box-sizing: border-box;
+ 		box-sizing: border-box;
+ 	}
+ 	.content{
+ 		color: #999;
+ 		height: 130px;
+ 		padding: 10px 0px;
+ 		overflow: hidden;
+ 		line-height: 22px;
+ 		font-weight: 100;
+ 		text-overflow:ellipsis;
+ 		/*white-space: nowrap;*/
+ 		-webkit-box-sizing: border-box;
+ 		-moz-box-sizing: border-box;
+ 		box-sizing: border-box;
+ 	}
+ 	.qita{
+ 		font-weight: 100;
+ 		padding: 10px 0px 0px 0px;
+ 		height: 38px;
+ 	}
+ 	.price{
+ 		font-weight: 100;
+ 		font-size: 38px;
+ 		color: #EE6411;
+ 		display: inline-block;
+ 		float: left;
+ 		padding: 0px 5px;
+ 		line-height: 38px;
+ 	}
+ 	.rmb{
+ 		font-size: 24px;
+ 		color: #EE6411;
+ 		font-weight: 100;
+ 		display: inline-block;
+ 		float: left;
+ 		line-height: 38px;
+ 	}
+ 	.store{
+ 		font-size: 14px;
+ 		color: #ccc;
+ 		padding: 0px 5px;
+ 		width: 280px;
+ 		display: inline-block;
+ 		text-overflow:ellipsis;
+ 		overflow: hidden;
+ 		white-space: nowrap;
+ 		vertical-align: 10px;
+ 		float: left;
+ 		position: absolute;
+ 		bottom: 0px;
+ 	}
+ 	.price_l{
+ 		display: inline-block;
+ 		height: 38px;
+ 		position: relative;
+ 	}
+ 	.links{
+ 		display: inline-block;
+ 		text-align: center;
+ 		float: right;
+ 		height: 38px;
+ 		line-height: 38px;
+ 		font-weight: 100;
+ 		font-size: 16px;
+ 	}
+ 	.links a {
+ 		text-decoration: none;
+ 		background-color: #EE6411;
+ 		color: #fff;
+ 		width: 100px;
+ 		height: 38px;
+ 		display: block;
+ 	}
+ 	.links a:hover{
+ 		background-color: #E65B1A;
+ 	}
+	#fanye{
+		width: 100%;
+		padding: 10px 0px;
+	}
+	#fanye a,#fanye span{
+		display: inline-block;
+		padding: 5px 10px;
+		margin-right: 10px;
+		background-color: #EE6411;
+		color: #fff;
+		text-decoration: none;
+	}
+	#fanye a:hover{
+		background-color: #E65B1A;
+	}
+	#fanye span{
+		background-color: #C0C0C0;
+	}
+ }
