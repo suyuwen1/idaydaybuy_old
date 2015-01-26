@@ -1,4 +1,8 @@
 <?php
+if (empty($_SESSION['user'])) {
+    header("Location:index.php");
+    exit;
+}
 function __autoload($className){
 	include '../class/'.$className.'_class.php';
 }
@@ -25,7 +29,7 @@ $M=new Allfunction();
     			$s=$M->biao('products')->where('id>"0"')->order('sort')->select();
     			if ($s) {
     				foreach ($s as $key => $value) {
-    					echo '<div id="'.$value['id'].'" style="padding:5px;"><span style="color:blue">'.$value['sort'].'</span> '.$value['title'].' <a target="_blank" href="addproduct.php?name=change&id='.$value['id'].'">修改</a> <a class="del" href="#">删除</a></div>';
+    					echo '<div id="'.$value['id'].'" style="padding:5px;"><span style="color:blue;width:50px;display:inline-block;text-align:center">'.$value['sort'].'</span> '.$value['title'].' <a target="_blank" href="addproduct.php?name=change&id='.$value['id'].'">修改</a> <a class="del" href="#">删除</a></div>';
     				}
     			}else{
     				echo '没有数据！';
