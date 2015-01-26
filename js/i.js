@@ -7,6 +7,7 @@
 $(function(){
 	top_show();
 	top_click();
+	screen_width();
 	// sou_click();
 });
 var b_ajax;
@@ -37,4 +38,13 @@ function top_click(){
 	$("#top").click(function(event) {
 		$('html,body').animate({scrollTop:0}, 'fast');
 	});
+}
+function screen_width(){
+	var w='width:'+$(window).width();
+	w+=',innerwidth:'+$(window).innerWidth();
+	w+=',outerwidth:'+$(window).outerWidth();
+	var h='height:'+$(window).height();
+	h+=',innerheight:'+$(window).innerHeight();
+	h+=',outerheight:'+$(window).outerHeight();
+	alert(w+'\n'+h);
 }

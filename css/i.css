@@ -17,6 +17,7 @@ body{
 	width: 100%;
 	color: #404040;
 }
+@media screen and (min-width: 980px){
 #b{
 	text-align: center;
 }
@@ -64,6 +65,7 @@ body{
 	border-radius: 5px;
 	width: 200px;
 	font-size: 16px;
+	font-weight: 100;
 	box-shadow: none;
 	outline: none;
 	vertical-align: middle;
@@ -141,8 +143,9 @@ body{
 	font-size: 12px;
 }
 .title{
-	font-size: 20px;
-	height: 46px;
+	font-size: 24px;
+	font-weight: 100;
+	/*height: 46px;*/
 	/*font-weight: 100;*/
 	text-align: center;
 	padding: 10px 0px;
@@ -155,10 +158,11 @@ body{
 }
 .content{
 	color: #999;
-	height: 123px;
+	height: 130px;
 	padding: 10px 0px;
 	overflow: hidden;
 	line-height: 22px;
+	font-weight: 100;
 	text-overflow:ellipsis;
 	/*white-space: nowrap;*/
 	-webkit-box-sizing: border-box;
@@ -166,6 +170,7 @@ body{
 	box-sizing: border-box;
 }
 .qita{
+	font-weight: 100;
 	padding: 10px 0px 0px 0px;
 	height: 38px;
 }
@@ -211,6 +216,8 @@ body{
 	float: right;
 	height: 38px;
 	line-height: 38px;
+	font-weight: 100;
+	font-size: 16px;
 }
 .links a {
 	text-decoration: none;
@@ -222,4 +229,5 @@ body{
 }
 .links a:hover{
 	background-color: #E65B1A;
+}
 }

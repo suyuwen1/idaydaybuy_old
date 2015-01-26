@@ -11,7 +11,7 @@ $w = (empty($_POST['sou-text'])) ? 'id>0' : 'title like "%'.$_POST['sou-text'].'
 <meta charset="utf-8">
 <meta name="renderer" content="webkit">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title>我们只是产品的搬用工</title>
+<title>爱国者</title>
 <meta name="description" content="">
 <meta name="keywords" content="">
 <link rel="stylesheet" type="text/css" href="css/font-awesome-4.2.0/css/font-awesome.min.css">
@@ -27,7 +27,7 @@ $w = (empty($_POST['sou-text'])) ? 'id>0' : 'title like "%'.$_POST['sou-text'].'
 					<li class="t-bars-li tlogo"><a class="t-bars-a" href="#">爱国者</a></li>
 					<li class="t-bars-li"><a class="t-bars-a" href="#">爱国者</a></li>
 					<li class="t-bars-li"><a class="t-bars-a" href="#">爱国者</a></li>
-					<li class="tsou"><form method="post"><input id="sou-text" placeholder="搜索" name="sou-text" type="text"><button id="t-submit" style="submit"><i class="fa fa-search"></i></button></form></li>
+					<li class="tsou"><form method="post"><input id="sou-text" placeholder="搜索" name="sou-text" type="text" value="<?php echo (empty($_POST['sou-text']))? '' : $_POST['sou-text'];?>"><button id="t-submit" style="submit"><i class="fa fa-search"></i></button></form></li>
 				</ul>
 			</div>
     	</div>
@@ -38,15 +38,15 @@ $w = (empty($_POST['sou-text'])) ? 'id>0' : 'title like "%'.$_POST['sou-text'].'
 					if ($s) {
 						foreach ($s as $k => $v) {
 							echo <<< END
-								<li class="c-li"><div class="c-li-img"><img src="img/123.png"></div><div class="c-li-info"><div class="title">{$v['title']}</div><div class="content">{$v['content']}</div><div class="qita"><div class="price_l"><div class="rmb">&yen;</div><div class="price">{$v['price']}</div><div class="store">{$v['store']}</div></div><div class="links"><a target="_blank" href="">去购买</a></div></div></div></li>
+								<li class="c-li"><div class="c-li-img"><img src="img/123.png"></div><div class="c-li-info"><div class="title">{$v['title']}</div><div class="content">{$v['content']}</div><div class="qita"><div class="price_l"><div class="rmb">&yen;</div><div class="price">{$v['price']}</div><div class="store">{$v['store']}</div></div><div class="links"><a target="_blank" href="">购买</a></div></div></div></li>
 END;
 						}
 					} else {
-						echo '没有找到数据！';
+						echo '没有找到"'.$_POST['sou-text'].'"!';
 					}
 					
 				?>
-				<li class="c-li"><div class="c-li-img"><img src="img/123.png"></div><div class="c-li-info"><div class="title">没有</div><div class="content">没有找</div><div class="qita"><div class="price_l"><div class="rmb">&yen;</div><div class="price">34.53</div><div class="store">数</div></div><div class="links"><a target="_blank" href="">去购买</a></div></div></div></li>
+				<li class="c-li"><div class="c-li-img"><img src="img/123.png"></div><div class="c-li-info"><div class="title">没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有</div><div class="content"><?php echo mb_substr('没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没123有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有fsadfasdfwqer没有没有没有没有没有没有没没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有没有', 0,180,'utf-8').'...';?></div><div class="qita"><div class="price_l"><div class="rmb">&yen;</div><div class="price">34.53</div><div class="store">数有1没有</div></div><div class="links"><a target="_blank" href="">购买</a></div></div></div></li>
 				<li class="c-li"><div class="c-li-img"><img src="img/456.jpg"></div><div class="c-li-info">1</div></li>
 				<li class="c-li"><div class="c-li-img"><img src="img/123.png"></div><div class="c-li-info">1</div></li>
 			</ul>

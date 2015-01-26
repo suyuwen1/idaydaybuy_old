@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<style type="text/css">
+	body,html{
+		width: 620px;
+	}
+	.a1{
+		font-family: "Segoe UI Light","Segoe","Segoe UI","Helvetica Neue",sans-serif;
+		font-size: 64px;
+		font-weight: lighter;
+	}
+	.a2{
+		font-family: "Myriad Set Pro","Microsoft YaHei";
+		font-size: 24px;
+		font-weight: lighter;
+	}
+</style>
+<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript">
+	function screen_width(){
+	var w='width:'+$(window).width();
+	w+=',innerwidth:'+$(window).innerWidth();
+	w+=',outerwidth:'+$(window).outerWidth();
+	var h='height:'+$(window).height();
+	h+=',innerheight:'+$(window).innerHeight();
+	h+=',outerheight:'+$(window).outerHeight();
+	alert(w+'\n'+h);
+	
+}
+screen_width();
+</script>
+</head>
+<body>
+    <div class="a1">1234567890</div>
+    <div class="a1">abcdefghijklmnopqrstuvwxyz</div>
+    <div class="a1">爱国者，中华人民共和国！</div>
+    <div class="a2">1234567890</div>
+    <div class="a2">abcdefghijklmnopqrstuvwxyz</div>
+    <div class="a2">爱国者，中华人民共和国！</div>
+</body>
+</html>
