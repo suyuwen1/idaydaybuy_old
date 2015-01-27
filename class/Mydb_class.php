@@ -10,7 +10,7 @@
 		
 	function __construct(){
 		require_once("password.php");
-	$this->mysql=mysqli_connect($dbhost,$dbuser,$dbpassword,$dbname)or("数据库连接失败:".mysqli_error());
+	$this->mysql=mysqli_connect($dbhost,$dbuser,$dbpassword,$dbname,$dbdk)or("数据库连接失败:".mysqli_error());
 	
 	/*mysql_select_db($dbname,$this->mysql)or("数据表连接失败:".mysql_error());*/
 	

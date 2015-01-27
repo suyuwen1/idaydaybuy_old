@@ -17,7 +17,7 @@
  	width: 100%;
  	color: #404040;
  }
- @media screen and (min-width: 980px){
+ /*@media screen and (min-width: 980px){*/
  	#b{
  		text-align: center;
  	}
@@ -248,4 +248,4 @@
 	#fanye span{
 		background-color: #C0C0C0;
 	}
- }
+ /*}*/

@@ -1,1 +1,3 @@
 http://blog.wpjam.com/m/wp-theme-lesson-3-starting-indexphp/
+
+http://www.cnfree.org/htaccess/htaccess-daquan.php

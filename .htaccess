@@ -1,0 +1,4 @@
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteRule ([a-zA-Z]{1,})-([0-9]{1,}).html$ index_cs.php?action=$1&id=$2
+</IfModule>

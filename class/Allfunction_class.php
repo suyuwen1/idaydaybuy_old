@@ -237,6 +237,48 @@
 			//返回结果
 			return $newpicname;
 		}
+		function fengyan($a,$n,$g='',$b=10,$c=5,$d=3){
+			// $f=10;    //显示几页
+			// $a=ceil($sum['a']/$f);   //总页数
+			// $b=10;    //显示几页
+			// $c=5;    //左右几个数
+			// $d=3;    //首页从 x+3 个数开始翻页
+			// $n=; //第几页
+			if($n==1){
+				echo '';
+			}else{
+				echo '<a href="?n='.($n-1).$g.'">上一页</a>';
+			}
+			if($a>$b){
+				if(($n-$c)<$d){
+					$i1=1;
+					$i2=$b;
+				}else if(($n-$c)>=$d and ($n+$c)<$a){
+					$i1=$n-$c;
+					$i2=$n+$c;
+				}else if(($n+$c)>=$a){
+					$i1=$n-$c;
+					$i2=$a;
+				}
+			}else{
+				$i1=1;
+				$i2=$a;
+			}
+			for($i=$i1;$i<=$i2;$i++){
+				if ($i==$n) {
+					if ($a!=1) {
+						echo '<span>'.$i.'</span>';
+					}
+				}else{
+					echo '<a href="?n='.$i.$g.'">'.$i.'</a>';
+				}
+			}
+			if($n==$a){
+				echo '';
+			}else{
+				echo '<a href="?n='.($n+1).$g.'">下一页</a>';
+			}
+		}
 		function __destruct(){
 			$this->d_all();
 		}

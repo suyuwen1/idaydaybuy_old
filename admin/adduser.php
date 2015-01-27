@@ -23,7 +23,16 @@ if (!empty($_POST['user']) && !empty($_POST['pw'])) {
 	}
 	
 }else{
-	echo "请输入用户名和密码！";
+	if (!empty($_GET['id'])) {
+		$d=$M->biao('login')->where('id="'.$_GET['id'].'"')->delete();
+		if ($d) {
+			echo '已删除！';
+		}else{
+			echo '删除失败，请稍后再试！';
+		}
+	}else{
+		echo "请输入用户名和密码！";
+	}
 }
 ?>
 <!DOCTYPE html>
@@ -42,5 +51,15 @@ if (!empty($_POST['user']) && !empty($_POST['pw'])) {
     	密码：<input type="password" name="pw">
     	<button type="submit">添加</button>
     </form>
+    <div id="ulist">
+    	<?php
+    		$s=$M->biao('login')->where('id>0')->select();
+    		if ($s) {
+    			foreach ($s as $key => $value) {
+    				echo '<div style="padding-bottom:10px">'.$value['user'].' <a href="?id='.$value['id'].'">删除</a></div>';
+    			}
+    		}
+    	?>
+    </div>
 </body>
 </html>

@@ -1,12 +1,18 @@
-<?php $page='index';?>
+<?php
+$page='search';
+if (empty($_GET['s'])) {
+	exit;
+}
+$w='title like "%'.$_GET['s'].'%" or store like "%'.$_GET['s'].'%"' ;
+?>
 <?php include('header.php');?>
 		<div id="c">
 			<ul>
 				<?php
 				$f=10;    //显示几页
 				$n=isset($_GET['n'])?$_GET['n']:1;
-				$sum=$M->sel_str('select count(*) as a from products');
-				$s=$M->biao('products')->where('id>0')->limit(($n-1)*$f,$f)->order('sort')->select();
+				$sum=$M->sel_str('select count(*) as a from products where '.$w);
+				$s=$M->biao('products')->where($w)->limit(($n-1)*$f,$f)->order('sort')->select();
 				if ($s) {
 					foreach ($s as $k => $v) {
 						if ($k>=$f) {
@@ -18,10 +24,10 @@
 END;
 					}
 					echo '<div id="fanye">';
-					$M->fengyan(ceil($sum['a']/$f),$n,$f);
+					$M->fengyan(ceil($sum['a']/$f),$n,'&s='.$_GET['s'],$f);
 					echo '</div>';
 				} else {
-					echo '没有找到"'.$_POST['sou-text'].'"!';
+					echo '没有找到"'.$_GET['sou-text'].'"!';
 				}
 
 				?>
