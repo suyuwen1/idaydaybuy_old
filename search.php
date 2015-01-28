@@ -1,4 +1,8 @@
 <?php
+function __autoload($className){
+	include 'class/'.$className.'_class.php';
+}
+$M=new Allfunction();
 $page='search';
 if (empty($_GET['s'])) {
 	exit;
@@ -9,7 +13,7 @@ $w='title like "%'.$_GET['s'].'%" or store like "%'.$_GET['s'].'%"' ;
 		<div id="c">
 			<ul>
 				<?php
-				$f=10;    //显示几页
+				$f=2;    //显示几页
 				$n=isset($_GET['n'])?$_GET['n']:1;
 				$sum=$M->sel_str('select count(*) as a from products where '.$w);
 				$s=$M->biao('products')->where($w)->limit(($n-1)*$f,$f)->order('sort')->select();
@@ -27,7 +31,7 @@ END;
 					$M->fengyan(ceil($sum['a']/$f),$n,'&s='.$_GET['s'],$f);
 					echo '</div>';
 				} else {
-					echo '没有找到"'.$_GET['sou-text'].'"!';
+					echo '<span style="color:red;">没有找到"'.$_GET['s'].'"!</span>';
 				}
 
 				?>

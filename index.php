@@ -1,4 +1,10 @@
-<?php $page='index';?>
+<?php
+function __autoload($className){
+	include 'class/'.$className.'_class.php';
+}
+$M=new Allfunction();
+$page='index';
+?>
 <?php include('header.php');?>
 		<div id="c">
 			<ul>
@@ -18,10 +24,10 @@
 END;
 					}
 					echo '<div id="fanye">';
-					$M->fengyan(ceil($sum['a']/$f),$n,$f);
+					$M->fengyan(ceil($sum['a']/$f),$n,'',$f);
 					echo '</div>';
 				} else {
-					echo '没有找到"'.$_POST['sou-text'].'"!';
+					echo '没有找到数据!';
 				}
 
 				?>
