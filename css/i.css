@@ -156,6 +156,14 @@
  		-moz-box-sizing: border-box;
  		box-sizing: border-box;
  	}
+ 	.title a{
+ 		text-decoration: none;
+ 		color: #404040;
+ 	}
+ 	.title a:hover{
+ 		border-bottom: solid 1px #EE6411;
+ 		color: #EE6411;
+ 	}
  	.content{
  		color: #999;
  		height: 130px;
@@ -251,5 +259,14 @@
 	#con_404{
 		text-align: center;
 		margin: 100px 0px;
+	}
+	#read-title{
+		font-size: 36px;
+		font-weight: 100;
+	}
+	#read-content{
+		margin: 20px auto;
+		text-align: left;
+		width: 980px;
 	}
  /*}*/

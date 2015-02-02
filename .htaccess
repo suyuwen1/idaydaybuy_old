@@ -1,6 +1,6 @@
 <IfModule mod_rewrite.c>
 RewriteEngine on
 RewriteBase /
-RewriteRule ^read/([0-9]{1,}).html$ read.php?id=$1
-ErrorDocument 404 http://localhost/idaydaybuy/404.html
+RewriteRule ^([0-9]{1,}).html$ read.php?id=$1
+ErrorDocument 404 http://www.idaydaybuy.com/404.php
 </IfModule>

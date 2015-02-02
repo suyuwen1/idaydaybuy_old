@@ -6,7 +6,8 @@
  */
 $(function(){
 	tj();
-	upimg.init();
+	//upimg.init();
+	imgchange();
 	title_del.del();
 })
 var b_ajax;
@@ -32,9 +33,10 @@ function tj(){
 			"img":$.trim($("#img-show img").attr('p')),
 			"links":$.trim($("#links").val()),
 			"sort":$.trim($("#sort").val()),
-			"content":$.trim($("#content").val()),
+			"description":$.trim($("#description").val()),
+			"content":$.trim(ue.getContent()),
 		}
-		if(da.title!='' && da.price!='' && da.store!='' && da.img!='' && da.links!='' && da.sort!='' && da.content!=''){
+		if(da.title!='' && da.price!='' && da.store!='' && da.img!='' && da.links!='' && da.sort!='' && da.description!=''){
 			i_ajax('post','post.php','json',{"name":$.trim($('#m').attr('d')),"d":da,"i":$.trim($('#m').attr('i'))},tj_bf,tj_su);
 		}else{
 			alert('请全部填写！');
@@ -88,7 +90,7 @@ var upimg={
 				url:"upfile.php?n="+f.name,
 				dataType:"json",
 				data:f,
-				contentType:"multipart/form-data",
+				contentType:"application/x-www-data-urlencoded",
 				processData:false,
 				beforeSend:function(){
 					$("#img-show").html('<i class="fa fa-refresh fa-spin"></i>');
@@ -121,3 +123,51 @@ var upimg={
 		});
 	}
 }
+function imgchange(){
+	$("#img").change(function(event) {
+		$("#form").submit();
+	});
+}
+function stopSend(str){
+	if (str) {
+		$("#img-show").html('<img p="'+str+'" width="100" height="100" src="../'+str+'">');
+	}else{
+		alert('图片上传失败，请稍后再试！');
+	}
+}
+// function ajaxFileUpload()
+// {
+// 	$("#img-show")
+// 	.ajaxStart(function(){
+// 		$(this).html('<i class="fa fa-refresh fa-spin"></i>');
+// 	})
+// 	.ajaxComplete(function(){
+// 		$(this).html('');
+// 	});
+
+// 	$.ajaxFileUpload
+// 	(
+// 	{
+// 		url:'upfile.php',
+// 		secureuri:false,
+// 		fileElementId:'img',
+// 		dataType: 'json',
+// 		data:{name:'img'},
+// 		success: function (data, status)
+// 		{
+// 			if (data.p) {
+// 						$("#img-show").html('<img p="'+data.p+'" width="100" height="100" src="../'+data.p+'">');
+// 					}else{
+// 						alert('图片上传失败，请稍后再试！');
+// 					}
+// 		},
+// 		error: function (data, status, e)
+// 		{
+// 			alert(e);
+// 		}
+// 	}
+// 	)
+
+// 	return false;
+
+// }

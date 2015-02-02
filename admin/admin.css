@@ -22,10 +22,10 @@
 .price{
 	width: 200px;
 }
-#content{
+#description{
 	border: solid 1px #999;
 }
-#m div{
+.m-i{
 	padding: 10px;
 }
 #m input{
