@@ -29,6 +29,7 @@ function tj(){
 		var da={
 			"title":$.trim($("#title").val()),
 			"price":$.trim($("#price").val()),
+			"old_price":$.trim($("#old_price").val()),
 			"store":$.trim($("#store").val()),
 			"img":$.trim($("#img-show img").attr('p')),
 			"links":$.trim($("#links").val()),
@@ -36,7 +37,7 @@ function tj(){
 			"description":$.trim($("#description").val()),
 			"content":$.trim(ue.getContent()),
 		}
-		if(da.title!='' && da.price!='' && da.store!='' && da.img!='' && da.links!='' && da.sort!='' && da.description!=''){
+		if(da.title!='' && da.price!='' && da.old_price!='' && da.store!='' && da.img!='' && da.links!='' && da.sort!='' && da.description!=''){
 			i_ajax('post','post.php','json',{"name":$.trim($('#m').attr('d')),"d":da,"i":$.trim($('#m').attr('i'))},tj_bf,tj_su);
 		}else{
 			alert('请全部填写！');
@@ -52,7 +53,7 @@ function tj_su(data){
 		$("#info").html(data[1]);
 		alert(data[1]);
 	} else{
-		alert('提交失败，请稍后再试！');
+		alert(data[1]);
 		$("#info").html(data[1]);
 	}
 	$(".m-i button").html('提交').removeAttr('disabled');

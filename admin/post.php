@@ -59,6 +59,7 @@ class Product extends Allfunction {
     function change(){
         $c=$this->biao('products')->where('id="'.$this->i.'"')->update($this->dt);
         if ($c) {
+            // echo $c;
             $this->rdt=array(1,'修改成功！');
         }else{
             $this->rdt=array(0,'修改失败，请稍后再试！');

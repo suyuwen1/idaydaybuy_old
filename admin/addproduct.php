@@ -7,8 +7,11 @@ if (!empty($_GET['name'])) {
         $M=new Allfunction();
         $s=$M->biao('products')->where('id='.$_GET['id'])->select();
         if ($s) {
+            // var_dump($s);
             $name='change';
             $i=$_GET['id'];
+            // $s[0]=array_map("stripcslashes",$s[0]);
+            // var_dump($s);
         }else{
             exit;
         }
@@ -41,15 +44,16 @@ if (!empty($_GET['name'])) {
     <div id="b">
     	<div id="m" d="<?php echo $name;?>" i="<?php echo $i;?>">
     		<div class="m-i">标题：<input id="title" class="input-text" size="200" type="text" value="<?php echo ($name=='add')?'':$s[0]['title'];?>"></div>
-    		<div class="m-i">价格：<input id="price" class="input-text price" size="50" type="text" value="<?php echo ($name=='add')?'':$s[0]['price'];?>"></div>
-    		<div class="m-i">厂商：<input id="store" class="input-text" size="200" type="text" value="<?php echo ($name=='add')?'':$s[0]['store'];?>"></div>
+    		<div class="m-i">现价格：<input id="price" class="input-text price" size="50" type="text" value="<?php echo ($name=='add')?'':$s[0]['price'];?>"></div>
+            <div class="m-i">原价格：<input id="old_price" class="input-text price" size="50" type="text" value="<?php echo ($name=='add')?'':$s[0]['old_price'];?>"></div>
+    		<div class="m-i">厂商：<input id="store" class="input-text" size="200" type="text" value="<?php echo ($name=='add')?'':($s[0]['store']);?>"></div>
     		<div class="m-i">图片：<form id="form" action="upfile.php" method="POST"  target="tarframe" enctype="multipart/form-data"><input name="img" id="img" class="input-text" size="200" type="file"></form></div>
             <iframe src="" style="display:none;" name="tarframe"></iframe>
-            <div class="m-i" id="img-show"><?php echo ($name=='add')?'':'<img p="'.$s[0]['img'].'" width="100" height="100" src="../'.$s[0]['img'].'">';?></div>
-    		<div class="m-i">链接：<input id="links" class="input-text" size="200" type="text" value="<?php echo ($name=='add')?'':$s[0]['links'];?>"></div>
+            <div class="m-i" id="img-show"><?php echo ($name=='add')?'':'<img p="'.($s[0]['img']).'" width="100" height="100" src="../'.($s[0]['img']).'">';?></div>
+    		<div class="m-i">链接：<input id="links" class="input-text" size="200" type="text" value="<?php echo ($name=='add')?'':($s[0]['links']);?>"></div>
     		<div class="m-i">排序：<input id="sort" class="input-text price" size="50" type="text" value="<?php echo ($name=='add')?'':$s[0]['sort'];?>"></div>
-    		<div class="m-i">内容：<textarea id="description" rows="6" cols="100"><?php echo ($name=='add')?'':$s[0]['description'];?></textarea></div>
-            <div class="m-i">详细信息：<script id="content" type="text/plain" style="width:1000px;height:500px;"><?php echo ($name=='add')?'':stripcslashes($s[0]['content']);?></script></div>
+    		<div class="m-i">内容：<textarea id="description" rows="6" cols="100"><?php echo ($name=='add')?'':($s[0]['description']);?></textarea></div>
+            <div class="m-i">详细信息：<script id="content" type="text/plain" style="width:1000px;height:500px;"><?php echo ($name=='add')?'':($s[0]['content']);?></script></div>
     		<div class="m-i"><button type="button">提交</button><a style="padding:20px;" href="admin.php">返回</a></div>
             <div id="info"></div>
     	</div>

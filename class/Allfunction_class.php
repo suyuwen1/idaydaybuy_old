@@ -113,6 +113,7 @@
 		public function update($data){//更新数据 $data 组数
 			$data2='';
 			$js=0;
+			$data=array_map("addslashes",$data);
 			foreach($data as $key => $val){
 				$data2.=$key.'="'.$val.'"';
 				$js++;
@@ -125,7 +126,7 @@
 			if($result&&mysqli_affected_rows($this->mysql)>0){
 				return true;
 				}else{
-					//$aaa=mysqli_error();
+					// $aaa=mysqli_error($this->mysql);
 					return false;
 					}
 			}
