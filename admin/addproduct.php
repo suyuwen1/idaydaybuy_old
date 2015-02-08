@@ -1,4 +1,9 @@
 <?php
+session_start();
+if (empty($_SESSION['user'])) {
+    header("Location:index.php");
+    exit;
+}
 function __autoload($className){
     include '../class/'.$className.'_class.php';
 }
