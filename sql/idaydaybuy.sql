@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 2015-01-30 16:12:32
+-- Generation Time: 2015-02-08 15:08:28
 -- 服务器版本： 5.6.17
 -- PHP Version: 5.5.12
 
@@ -42,7 +42,8 @@ CREATE TABLE IF NOT EXISTS `login` (
 CREATE TABLE IF NOT EXISTS `products` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(200) NOT NULL DEFAULT '0' COMMENT '标题',
-  `price` decimal(10,2) NOT NULL COMMENT '价格',
+  `price` decimal(10,1) NOT NULL COMMENT '价格',
+  `old_price` decimal(10,1) NOT NULL COMMENT '原价',
   `store` varchar(200) NOT NULL DEFAULT '0' COMMENT '商家',
   `img` text NOT NULL COMMENT '图片',
   `links` text NOT NULL COMMENT '链接',
@@ -53,7 +54,7 @@ CREATE TABLE IF NOT EXISTS `products` (
   KEY `title` (`title`),
   KEY `price` (`price`),
   KEY `store` (`store`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='商品信息' AUTO_INCREMENT=36 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='商品信息' AUTO_INCREMENT=44 ;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
