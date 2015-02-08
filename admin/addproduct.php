@@ -15,7 +15,7 @@ if (!empty($_GET['name'])) {
             // var_dump($s);
             $name='change';
             $i=$_GET['id'];
-            // $s[0]=array_map("stripcslashes",$s[0]);
+            $s[0]=array_map("stripcslashes",$s[0]);
             // var_dump($s);
         }else{
             exit;
