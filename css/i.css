@@ -263,8 +263,8 @@
 	#read-info{
 		background-color: #fff;
 		text-align: left;
-		height: 330px;
-		padding: 10px;
+		height: 350px;
+		padding: 20px;
 	}
 	#read-info:after{
 		content: "";
@@ -324,7 +324,7 @@
 		visibility: hidden;
 	}
 	#read-info-con-buy{
-		margin: 20px 0px 10px;
+		margin: 20px 0px 20px;
 	}
 	#read-info-con-buy a{
 		display: inline-block;
@@ -341,10 +341,32 @@
 		background-color: #fff;
 		margin: 30px 0px;
 		text-align: left;
-		padding: 10px;
+		padding: 20px;
+		font-size: 14px;
+		line-height: 30px;
+		word-wrap:break-word;
 	}
 	#read-content img{
-		max-width: 1000px;
+		max-width: 900px;
 		background-color: #fff;
+		margin: 15px 0px 0px;
+	}
+	#read-content h2{
+		font-size: 18px;
+		font-weight: normal;
+		margin: 20px -20px 20px -24px;
+		padding: 10px 20px 10px 20px;
+		line-height: 18px;
+		border-left: 4px solid #EE6411;
+		background-color: #f5f5f5;
+	}
+	#read-content blockquote {
+		margin: 15px auto;
+		border: 1px solid #E5E5E5;
+		border-left-width: 3px;
+		padding: 10px 15px 10px;
+		background-color: #FAFAFA;
+		font-size: 12px;
+		line-height: 20px;
 	}
 /*}*/

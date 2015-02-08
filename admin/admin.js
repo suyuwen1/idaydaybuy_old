@@ -49,7 +49,9 @@ function tj_bf(){
 }
 function tj_su(data){
 	if (data[0]) {
-		$("#sort").val('');
+		if ($.trim($('#m').attr('d'))=='add') {
+			$("#sort").val('');
+		};
 		$("#info").html(data[1]);
 		alert(data[1]);
 	} else{
