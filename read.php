@@ -40,7 +40,7 @@ if ($s) {
 	</div>
 	<div id="read-content">
 	<!-- stripcslashes -->
-		<?php echo $s['content'];?>
+		<?php echo stripcslashes($s['content']);?>
 	</div>
 </div>
 <?php include('footer.php');?>

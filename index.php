@@ -31,10 +31,10 @@ END;
 			</div>
 		</div>
 		<?php
-				if ($s) {
-					echo '<div id="fanye">';
-					$M->fengyan(ceil($sum['a']/$f),$n,'',$f);
-					echo '</div>';
-				}
-			?>
+			if ($s) {
+				echo '<div id="fanye">';
+				$M->fengyan(ceil($sum['a']/$f),$n,'',$f);
+				echo '</div>';
+			}
+		?>
 <?php include('footer.php');?>
