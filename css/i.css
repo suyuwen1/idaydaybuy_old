@@ -263,7 +263,8 @@
 	#read-info{
 		background-color: #fff;
 		text-align: left;
-		height: 310px;
+		height: 330px;
+		padding: 10px;
 	}
 	#read-info:after{
 		content: "";
@@ -274,10 +275,14 @@
 	#read-info-img{
 		width: 310px;
 		height: 310px;
-		display: table-cell;
-		vertical-align: middle;
+		display: inline-block;
 		float: left;
 		margin-left: -100%;
+	}
+	#read-info-img-con{
+		display: table-cell;
+		vertical-align: middle;
+		height: 310px;
 	}
 	#read-info-img img{
 		max-height: 310px;
@@ -287,15 +292,15 @@
 	#read-info-con{
 		display: inline-block;
 		margin-left: 360px;
-		padding-right: 10px;
+		/*padding-right: 10px;*/
 		height: 310px;
 		float: left;
 		word-wrap: break-word;
 		overflow: hidden;
 	}
 	#read-info-con-title{
-		font-weight: 100;
-		margin:15px 0px;
+		/*font-weight: 100;*/
+		margin:5px 0px 15px;
 		color: #000;
 		font-size: 16px;
 		/*white-space:nowrap;*/

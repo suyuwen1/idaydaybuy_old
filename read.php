@@ -36,7 +36,7 @@ if ($s) {
 			<div id="read-info-con-buy"><a rel="external nofollow" href="<?php echo $s['links'];?>">立即购买</a></div>
 			<div id="read-info-con-store"><?php echo $s['store'];?></div>
 		</div>
-		<div id="read-info-img"><img alt="<?php echo $s['title'];?>" src="../<?php echo $s['img'];?>"></div>
+		<div id="read-info-img"><div id="read-info-img-con"><img alt="<?php echo $s['title'];?>" src="../<?php echo $s['img'];?>"></div></div>
 	</div>
 	<div id="read-content">
 	<!-- stripcslashes -->
