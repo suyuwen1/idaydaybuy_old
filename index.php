@@ -1,4 +1,9 @@
 <?php
+if (!empty($_GET['a'])||!empty($_GET['i'])) {
+	header('HTTP/1.1 404 Not Found');
+	header("status: 404 Not Found");
+	exit;
+}
 function __autoload($className){
 	include 'class/'.$className.'_class.php';
 }
