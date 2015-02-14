@@ -35,9 +35,12 @@ END;
 		</div>
 		<?php
 			if ($s) {
-				echo '<div id="fanye">';
-				$M->fengyan(ceil($sum['a']/$f),$n,'',$f);
-				echo '</div>';
+				$ss=ceil($sum['a']/$f);
+				if ($ss!=1) {
+					echo '<div id="fanye">';
+					$M->fengyan($ss,$n,'',$f);
+					echo '</div>';
+				}
 			}
 		?>
 <?php include('footer.php');?>
