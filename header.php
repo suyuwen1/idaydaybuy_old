@@ -10,7 +10,7 @@
 	<meta name="description" content="<?php echo empty($description)?'天天买-我们只是产品的搬用工！':$description;?>">
 	<meta name="keywords" content="天天买,天天特卖,促销活动">
 	<link rel="stylesheet" type="text/css" href="css/font-awesome-4.2.0/css/font-awesome.min.css">
-	<link href="css/i.css" type="text/css" rel="stylesheet">
+	<link href="css/i.css" type="text/css" rel="stylesheet" media="all">
 	<script src="js/jquery-1.11.2.min.js" type="text/javascript"></script>
 	<script src="js/i.js" type="text/javascript"></script>
 </head>

@@ -388,10 +388,8 @@
 		line-height: 20px;
 	}
 /*}*/
-@media screen and (max-width: 385px) {
-	#t-bars,#c,#read{
- 		width: auto;
- 	}
+@media screen {
+	
  	.c-li-img{
  		height: auto;
  	}
@@ -452,9 +450,14 @@
 		padding: 10px 0px;
 	}
 }
+@media screen and (max-width: 385px){
+	#t-bars,#c,#read{
+ 		width: auto;
+ 	}
+}
 @media screen and (min-width: 385px) and (max-width: 695px) {
 	#t-bars,#c,#read{
- 		width: 385px;
+ 		width: 350px;
  	}
  	.tsou{
 		display: none;
