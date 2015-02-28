@@ -20,7 +20,7 @@
 			<div id="t-bars">
 					<div class="t-bars-li tlogo"><a class="t-bars-a" href="index.php">天天买</a></div>
 					<div id="fa-bars"><i id="fa-bars-i" class="fa fa-bars fa-2x fa-fw"></i></div>
-					<div id="bars-list"><div class="t-bars-li"><a class="t-bars-a" href="#">天天买特卖</a></div>
-					<div class="tsou"><form action="search.php" method="get"><input id="sou-text" placeholder="搜索" name="s" type="text" value="<?php echo (empty($_POST['sou-text']))? '' : $_POST['sou-text'];?>"><button id="t-submit" style="submit"><i class="fa fa-search"></i></button></form></div></div>
+					<div id="bars-list" class="t-bars-li"><div class="bars-list-b"><a class="t-bars-a" href="#">天天买特卖</a></div><div class="bars-list-b"><a class="t-bars-a" href="#">天天买特卖</a></div></div>
+					<div class="tsou bars-list-b"><form action="search.php" method="get"><input id="sou-text" placeholder="搜索" name="s" type="text" value="<?php echo (empty($_POST['sou-text']))? '' : $_POST['sou-text'];?>"><button id="t-submit" style="submit"><i class="fa fa-search"></i></button></form></div>
 			</div>
 		</div>

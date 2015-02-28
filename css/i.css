@@ -40,9 +40,6 @@
  		background-color: #444;
  		/*background-color:rgba(0,0,0,0.6);*/
  	}
- 	#fa-bars{
- 		display: none;
- 	}
  	#t-bars:after{
  		content: "";
  		display: block;
@@ -71,6 +68,16 @@
  	}
  	.t-bars-a:hover{
  		color: #DBDCD6;
+ 	}
+ 	#fa-bars{
+ 		display: none;
+ 	}
+ 	#bars-list{
+ 		/*width: 100%;*/
+ 	}
+ 	.bars-list-b{
+ 		display: block;
+ 		border-bottom: solid 1px #444444;
  	}
  	.tsou{
  		display: inline-block;
@@ -416,12 +423,12 @@
 	#t{
 		margin-bottom: 20px;
 	}
-	.t-bars-a{
+	.tlogo{
 		font-size: 20px;
-		padding: 0px;
 	}
 	#bars-list{
-		display: none;
+		/*display: none;*/
+		background-color: #363636;
 	}
 	#fa-bars{
  		display: inline-block;
