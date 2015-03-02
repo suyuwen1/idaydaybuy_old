@@ -28,7 +28,7 @@
  	}
  	#t{
  		height: 100%;
- 		margin-bottom: 40px;
+ 		margin-bottom: 20px;
  		background-color: #444;
  		/*background-color:rgba(0,0,0,0.6);*/
  	}
@@ -58,6 +58,7 @@
  		text-align: left;
  		font-size: 18px;
  		padding-left: 0px;
+ 		display: inline-block;
  	}
  	.t-bars-a{
  		text-decoration: none;
@@ -78,6 +79,7 @@
  	.bars-list-b{
  		display: block;
  		border-bottom: solid 1px #444444;
+ 		float: left;
  	}
  	.tsou{
  		display: inline-block;
@@ -121,6 +123,7 @@
  	}
  	#c-c{
  		margin: 0px -35px 0px 0px;
+ 		padding-top: 20px;
  	}
  	#c-c:after{
  		content:"";
@@ -397,6 +400,10 @@
 		font-size: 12px;
 		line-height: 20px;
 	}
+	#search_t_i{
+		padding-bottom: 20px;
+		margin-right: 35px;
+	}
 /*}*/
 @media screen and (max-width: 385px) {
 	#t-bars,#c,#read{
@@ -410,7 +417,7 @@
  		bottom: 60px;
  	}
 	.tsou{
-		/*display: none;*/
+		display: none;
 		float: none;
 		position: static;
 	}
@@ -423,12 +430,25 @@
 	#t{
 		margin-bottom: 20px;
 	}
+	#t-bars{
+		text-align: left;
+	}
 	.tlogo{
 		font-size: 20px;
+		margin: 0px 0px;
+	}
+	.t-bars-li{
+		float: none;
+	}
+	.bars-list-b{
+		float: none;
 	}
 	#bars-list{
-		/*display: none;*/
+		display: none;
 		background-color: #363636;
+		padding: 0px;
+		text-align: left;
+		float: none;
 	}
 	#fa-bars{
  		display: inline-block;
@@ -497,7 +517,9 @@
  		bottom: 60px;
  	}
 	.tsou{
-		/*display: none;*/
+		display: none;
+		float: none;
+		position: static;
 	}
 	.c-li{
 		box-shadow: 0 0 20px #888;
@@ -508,6 +530,40 @@
 	#t{
 		margin-bottom: 20px;
 	}
+	#t-bars{
+		text-align: left;
+	}
+	.tlogo{
+		font-size: 20px;
+		margin: 0px 0px;
+	}
+	.t-bars-li{
+		float: none;
+	}
+	.bars-list-b{
+		float: none;
+	}
+	#bars-list{
+		display: none;
+		background-color: #363636;
+		padding: 0px;
+		text-align: left;
+		float: none;
+	}
+	#fa-bars{
+ 		display: inline-block;
+ 		padding: 0px;
+ 		color: #fff;
+ 		float: right;
+ 		cursor: default;
+ 		line-height: 46px;
+ 	}
+ 	#fa-bars-i{
+ 		/*padding: 8px 0px 0px 0px;*/
+ 		/*border: solid 1px #525252;*/
+ 		/*font-size: 20px;*/
+ 		vertical-align: middle;
+ 	}
 	#read-content h2{
 		margin-left: -20px;
 	}
@@ -553,6 +609,9 @@
 	#t-bars,#c,#read{
  		width: 695px;
  	}
+ 	#bars-list,.tsou{
+ 		display: inline-block;
+ 	}
 }
 @media screen and (min-width: 1000px) {
 	#t-bars,#c,#read{
@@ -563,5 +622,8 @@
  	}
  	#t-bars{
  		padding: 0px;
+ 	}
+ 	#bars-list,.tsou{
+ 		display: inline-block;
  	}
 }

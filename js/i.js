@@ -7,6 +7,7 @@
 $(function(){
 	top_show();
 	top_click();
+	bars_mean();
 	// screen_width();
 	// sou_click();
 });
@@ -47,4 +48,10 @@ function screen_width(){
 	h+=',innerheight:'+$(window).innerHeight();
 	h+=',outerheight:'+$(window).outerHeight();
 	alert(w+'\n'+h);
+}
+function bars_mean(){
+	$("#fa-bars").click(function() {
+		$("#bars-list,.tsou").slideToggle("fast");
+	});
+	
 }
